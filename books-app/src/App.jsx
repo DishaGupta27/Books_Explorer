@@ -12,7 +12,7 @@ const App = () => {
   const [filteredItems, setFilteredItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isVerified, setIsVerified] = useState(false);
-  const ITEMS_PER_PAGE = 10;
+  const ITEMS_PER_PAGE = 12;
 
   const fetchBooks = async () => {
     try {
@@ -48,47 +48,40 @@ const App = () => {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="app-container">
-        <h1
-          style={{
-            marginBottom: "8px",
-            color: "black",
-            textDecoration: "underline",
-            fontSize: "40px",
-            marginTop: "30px",
-            fontWeight: "light",
-          }}
-        >
-          Book Explorer
-        </h1>
-        {!isVerified ? (
-          <ReCAPTCHA
-            className="captcha"
-            sitekey="6LfCQqYqAAAAAIrPFEaOkUpniZymHu_ZwOURKtLV"
-            onChange={handleReCAPTCHA}
-          />
-        ) : (
-          <>
-            <button onClick={fetchBooks} className="fetch-button">
-              Load Books
-            </button>
-            <SearchBar
-              items={items}
-              setFilteredItems={setFilteredItems}
-              setCurrentPage={setCurrentPage}
+        <nav className="navbar">
+          <h1 className="navbar-title">Books Explorer</h1>
+        </nav>
+        <div style={{ padding: "20px" }}>
+          {!isVerified ? (
+            <ReCAPTCHA
+              className="captcha"
+              sitekey="6LfCQqYqAAAAAIrPFEaOkUpniZymHu_ZwOURKtLV"
+              onChange={handleReCAPTCHA}
             />
-            <Pagination
-              totalItems={filteredItems.length}
-              itemsPerPage={ITEMS_PER_PAGE}
-              setCurrentPage={setCurrentPage}
-            />
-            <ItemList items={currentItems} updateItems={updateItems} />
-            <Pagination
-              totalItems={filteredItems.length}
-              itemsPerPage={ITEMS_PER_PAGE}
-              setCurrentPage={setCurrentPage}
-            />
-          </>
-        )}
+          ) : (
+            <>
+              <button onClick={fetchBooks} className="fetch-button">
+                Load Books
+              </button>
+              <SearchBar
+                items={items}
+                setFilteredItems={setFilteredItems}
+                setCurrentPage={setCurrentPage}
+              />
+              {/* <Pagination
+                totalItems={filteredItems.length}
+                itemsPerPage={ITEMS_PER_PAGE}
+                setCurrentPage={setCurrentPage}
+              /> */}
+              <ItemList items={currentItems} updateItems={updateItems} />
+              <Pagination
+                totalItems={filteredItems.length}
+                itemsPerPage={ITEMS_PER_PAGE}
+                setCurrentPage={setCurrentPage}
+              />
+            </>
+          )}
+        </div>
       </div>
     </DndProvider>
   );
