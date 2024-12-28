@@ -4,7 +4,7 @@ Welcome to **Book Explorer**, a single-page React application that allows users 
 
 
 ## Deployed App
-Netlify: https://books-explorer.netlify.app/
+Netlify: **https://books-explorer.netlify.app/**
 
 ## Features
 - **Book Details**: View detailed information about each book, including title, image and author.
@@ -17,4 +17,23 @@ Netlify: https://books-explorer.netlify.app/
 - **Frontend**: React.js
 - **API Integration**: Google Books API
 - **Deployment**: Netlify
+
+## **How to Get Started**
+
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/DishaGupta27/Sav.com_Assignment.git
+   ```
+2. **Navigate to the project**:
+   ```bash
+   cd Sav.com_Assignment
+   ```
+3. **Install dependencies**:
+   ```bash
+   npm install
+
+4. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
