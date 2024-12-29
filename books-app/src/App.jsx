@@ -12,7 +12,7 @@ const App = () => {
   const [filteredItems, setFilteredItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isVerified, setIsVerified] = useState(false);
-  const ITEMS_PER_PAGE = 12;
+  const ITEMS_PER_PAGE = 10;
 
   const fetchBooks = async () => {
     try {

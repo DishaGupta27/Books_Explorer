@@ -4,7 +4,7 @@ body {
   height: 100vh;
   background-image: url('./assets/book_cover3.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -64,7 +64,8 @@ body {
 
 .item-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   padding: 20px;
   list-style: none;
@@ -182,6 +183,14 @@ body {
   .item-card h3 {
     font-size: 11px;
   }
+
+  body {
+    background-size: contain;
+    /* Scales the image to fit within the viewport */
+    background-position: top center;
+    /* Adjust position to improve visibility */
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -212,5 +221,12 @@ body {
 
   .search-bar {
     padding: 8px;
+  }
+
+  body {
+    background-size: cover;
+    /* Ensures better fit for very small screens */
+    background-position: center;
+    /* Center-aligns for a balanced look */
   }
 }
