@@ -27,7 +27,7 @@ Netlify: **https://books-explorer.netlify.app/**
    ```
 2. **Navigate to the project**:
    ```bash
-   cd Sav.com_Assignment
+   cd books-app
    ```
 3. **Install dependencies**:
    ```bash
