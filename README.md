@@ -23,7 +23,7 @@ Netlify: **https://books-explorer.netlify.app/**
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/DishaGupta27/Sav.com_Assignment.git
+   git clone https://github.com/DishaGupta27/Books_Explorer.git
    ```
 2. **Navigate to the project**:
    ```bash
